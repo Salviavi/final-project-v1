@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* hero */
+
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/landingBackground3.png);
+    background-position: center;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 10px 10%;
+    position: relative;
+}
+
+.container {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 140px;
+}
+
+.container ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+.container ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.reg-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(60deg, #D862BC, #fcb0b3);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: transform 0.2s;
+}
+
+.reg-btn:hover {
+    transform: scale(1.05);
+}
+
+.join-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 80px;
+    color: #fff;
+    background-image: linear-gradient(60deg, #D862BC, #fcb0b3);
+    font-size: 18px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+}
+
+.content {
+    margin-top: 10%;
+    max-width: 700px;
+}
+
+.content h1{
+    font-size: 72px;
+    color: #222;
+}
+
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+
+.content .join-btn {
+    animation-delay: 0.8s;
+    transition: transform 0.2s;
+}
+
+.content .join-btn:hover {
+    transform: scale(1.5);
+}
+
+.model-img {
+    width: 450px;
+    position:absolute;
+    bottom: 0%;
+    right: 14%;
+}
+
+.model-img.animation {
+    animation-delay: 1s;
+}
+
+.animation {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* carousel or card sliders */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+.category-list {
+    margin-top: 20px; /* Equivalent to mt-20 */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Adds spacing between the cards */
+}
+
+.category-card {
+    background-color: white; /* Equivalent to bg-white */
+    height: 300px; /* Equivalent to h-[450px] */
+    color: black; /* Equivalent to text-black */
+    border-radius: 16px; /* Equivalent to rounded-xl */
+    overflow: hidden; /* Ensures content does not overflow the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for depth */
+    flex: 1 1 calc(33% - 20px); /* Adjusts the card width (3 cards in a row with space) */
+    max-width: calc(33% - 20px); /* Ensures maximum width */
+}
+
+.category-header {
+    height: 224px; /* Equivalent to h-56 */
+    border-top-left-radius: 16px; /* Equivalent to rounded-t-xl */
+    border-top-right-radius: 16px; /* Equivalent to rounded-t-xl */
+    background-color: #4f46e5; /* Equivalent to bg-indigo-500 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-image {
+    height: 176px; /* Equivalent to h-44 */
+    width: 176px; /* Equivalent to w-44 */
+    border-radius: 50%; /* Equivalent to rounded-full */
+}
+
+.category-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; /* Equivalent to gap-4 */
+    padding: 16px; /* Equivalent to p-4 */
+}
+
+.category-name {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+}
+
+.slick-slide > div {
+    margin: 0 10px;
+}
